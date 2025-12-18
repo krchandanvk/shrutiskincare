@@ -9,7 +9,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        {/* HEADER */}
+        {/* ================= HEADER ================= */}
         <header
           style={{
             background: "#ffffff",
@@ -29,20 +29,47 @@ export default function RootLayout({
               justifyContent: "space-between",
             }}
           >
-            {/* BRAND NAME */}
+            {/* BRAND + LOGO */}
             <Link
               href="/"
               style={{
-                fontSize: 26,
-                fontWeight: 700,
-                color: "#ec4899",
-                letterSpacing: "0.5px",
+                display: "flex",
+                alignItems: "center",
+                gap: 12,
+                textDecoration: "none",
               }}
             >
-              Shruti Skin Care
+              {/* LOGO IMAGE */}
+              <img
+                src="/logo.png"
+                alt="Shruti Skin Care Logo"
+                style={{
+                  width: 42,
+                  height: 42,
+                  objectFit: "contain",
+                }}
+              />
+
+              {/* BRAND TEXT */}
+              <div>
+                <div
+                  style={{
+                    fontSize: 24,
+                    fontWeight: 700,
+                    color: "#ec4899",
+                    lineHeight: 1,
+                  }}
+                >
+                  Shruti Skin Care
+                </div>
+
+                <small style={{ fontSize: 12, color: "#6b7280" }}>
+                  Everyday Beauty. Naturally Confident.
+                </small>
+              </div>
             </Link>
 
-            {/* NAV LINKS */}
+            {/* NAVIGATION */}
             <nav style={{ display: "flex", gap: 22 }}>
               <Link href="/free-consultation">Free Consultation</Link>
               <Link href="/contact">Contact</Link>
@@ -50,10 +77,10 @@ export default function RootLayout({
           </div>
         </header>
 
-        {/* PAGE CONTENT */}
+        {/* ================= PAGE CONTENT ================= */}
         <main>{children}</main>
 
-        {/* FLOATING WHATSAPP */}
+        {/* ================= WHATSAPP FLOATING BUTTON ================= */}
         <a
           href="https://wa.me/917484819768"
           target="_blank"
@@ -63,18 +90,9 @@ export default function RootLayout({
             bottom: 20,
             right: 20,
             backgroundColor: "#25D366",
-            color: "#fff",
+            color: "#ffffff",
             padding: "14px 18px",
             borderRadius: "50px",
             textDecoration: "none",
             fontWeight: 600,
-            boxShadow: "0 4px 10px rgba(0,0,0,0.2)",
-            zIndex: 9999,
-          }}
-        >
-          💬 WhatsApp Us
-        </a>
-      </body>
-    </html>
-  );
-}
+            boxShadow: "0 4px
