@@ -1,10 +1,11 @@
 import "./globals.css";
 import Link from "next/link";
+import type { ReactNode } from "react";
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode;
+  children: ReactNode;
 }) {
   return (
     <html lang="en">
@@ -39,7 +40,7 @@ export default function RootLayout({
                 textDecoration: "none",
               }}
             >
-              {/* LOGO IMAGE */}
+              {/* LOGO */}
               <img
                 src="/logo.png"
                 alt="Shruti Skin Care Logo"
@@ -62,7 +63,6 @@ export default function RootLayout({
                 >
                   Shruti Skin Care
                 </div>
-
                 <small style={{ fontSize: 12, color: "#6b7280" }}>
                   Everyday Beauty. Naturally Confident.
                 </small>
@@ -71,3 +71,37 @@ export default function RootLayout({
 
             {/* NAVIGATION */}
             <nav style={{ display: "flex", gap: 22 }}>
+              <Link href="/free-consultation">Free Consultation</Link>
+              <Link href="/contact">Contact</Link>
+            </nav>
+          </div>
+        </header>
+
+        {/* ================= PAGE CONTENT ================= */}
+        <main>{children}</main>
+
+        {/* ================= WHATSAPP BUTTON ================= */}
+        <a
+          href="https://wa.me/917484819768"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{
+            position: "fixed",
+            bottom: 20,
+            right: 20,
+            backgroundColor: "#25D366",
+            color: "#ffffff",
+            padding: "14px 18px",
+            borderRadius: "50px",
+            textDecoration: "none",
+            fontWeight: 600,
+            boxShadow: "0 4px 12px rgba(0,0,0,0.2)",
+            zIndex: 2000,
+          }}
+        >
+          WhatsApp
+        </a>
+      </body>
+    </html>
+  );
+}
