@@ -35,8 +35,16 @@ a {
 /* ---------- BUTTONS ---------- */
 .btn-primary {
   background: linear-gradient(135deg, #ec4899, #db2777);
-  color: #fff;
+  color: #ffffff;
   padding: 14px 22px;
   border-radius: 999px;
-  font-weigh
+  font-weight: 600;
+  display: inline-block;
+  box-shadow: 0 8px 20px rgba(236, 72, 153, 0.35);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
 
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(236, 72, 153, 0.45);
+}
