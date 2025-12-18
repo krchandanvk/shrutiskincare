@@ -1,4 +1,5 @@
 import "./globals.css";
+import Link from "next/link";
 
 export default function RootLayout({
   children,
@@ -8,30 +9,27 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        {children}
-
-        {/* Floating WhatsApp Button */}
-        <a
-          href="https://wa.me/917484819768"
-          target="_blank"
-          rel="noopener noreferrer"
+        {/* HEADER */}
+        <header
           style={{
-            position: "fixed",
-            bottom: 20,
-            right: 20,
-            backgroundColor: "#25D366",
-            color: "#fff",
-            padding: "14px 18px",
-            borderRadius: "50px",
-            textDecoration: "none",
-            fontWeight: 600,
-            boxShadow: "0 4px 10px rgba(0,0,0,0.2)",
-            zIndex: 9999,
+            background: "#ffffff",
+            padding: "18px 32px",
+            borderBottom: "1px solid #f3e8ff",
+            position: "sticky",
+            top: 0,
+            zIndex: 1000,
           }}
         >
-          💬 WhatsApp Us
-        </a>
-      </body>
-    </html>
-  );
-}
+          <div
+            style={{
+              maxWidth: 1200,
+              margin: "0 auto",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "space-between",
+            }}
+          >
+            {/* BRAND NAME */}
+            <Link
+              href="/"
+              style={{
