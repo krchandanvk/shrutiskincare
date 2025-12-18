@@ -8,7 +8,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>
+      <body style={{ margin: 0, fontFamily: "Arial, sans-serif" }}>
         {/* ================= HEADER ================= */}
         <header
           style={{
@@ -71,28 +71,3 @@ export default function RootLayout({
 
             {/* NAVIGATION */}
             <nav style={{ display: "flex", gap: 22 }}>
-              <Link href="/free-consultation">Free Consultation</Link>
-              <Link href="/contact">Contact</Link>
-            </nav>
-          </div>
-        </header>
-
-        {/* ================= PAGE CONTENT ================= */}
-        <main>{children}</main>
-
-        {/* ================= WHATSAPP FLOATING BUTTON ================= */}
-        <a
-          href="https://wa.me/917484819768"
-          target="_blank"
-          rel="noopener noreferrer"
-          style={{
-            position: "fixed",
-            bottom: 20,
-            right: 20,
-            backgroundColor: "#25D366",
-            color: "#ffffff",
-            padding: "14px 18px",
-            borderRadius: "50px",
-            textDecoration: "none",
-            fontWeight: 600,
-            boxShadow: "0 4px
