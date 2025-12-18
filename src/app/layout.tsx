@@ -1,6 +1,5 @@
 import "./globals.css";
 import Link from "next/link";
-<img src="/logo.png" />
 
 export default function RootLayout({
   children,
