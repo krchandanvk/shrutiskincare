@@ -49,8 +49,7 @@ a {
   box-shadow: 0 12px 28px rgba(236, 72, 153, 0.45);
 }
 
-/* === CATEGORY GRID (RESTORE ORIGINAL LOOK) === */
-
+/* ---------- CATEGORY GRID ---------- */
 .category-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -83,4 +82,100 @@ a {
   font-size: 14px;
   color: #666;
   margin: 0;
+}
+
+/* ============================= */
+/* 📱 MOBILE HEADER — EXACT FIX */
+/* ============================= */
+
+@media (max-width: 768px) {
+
+  main {
+    padding: 20px !important;
+  }
+
+  /* HEADER */
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 14px;
+  }
+
+  /* 🔴 FORCE HIDE NAV LINKS ON MOBILE */
+  header .nav-links,
+  header a[href="/free-consultation"],
+  header a[href="/contact"] {
+    display: none !important;
+  }
+
+  /* LOGO + BRAND */
+  .logo-area {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .logo-area img {
+    width: 52px;
+    height: auto;
+  }
+
+  /* BRAND TEXT — FORCE SINGLE LINE */
+  .brand-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.15;
+    min-width: max-content;
+  }
+
+  .brand-text h1 {
+    font-size: 22px;
+    margin: 0;
+    white-space: nowrap;     /* ⬅️ CRITICAL */
+    word-break: keep-all;   /* ⬅️ CRITICAL */
+  }
+
+  .brand-text p {
+    font-size: 13px;
+    margin: 2px 0 0;
+    color: #777;
+  }
+
+  /* HERO */
+  .hero h1,
+  h1 {
+    font-size: 34px;
+    line-height: 1.2;
+  }
+
+  .hero p {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  /* CTA */
+  .btn-primary {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 12px;
+  }
+
+  .hero a[href="/contact"] {
+    width: 100%;
+    text-align: center;
+    margin-left: 0 !important;
+  }
+
+  /* CATEGORY GRID */
+  .category-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  /* WHATSAPP */
+  .whatsapp-float {
+    bottom: 16px !important;
+    right: 16px !important;
+  }
 }
