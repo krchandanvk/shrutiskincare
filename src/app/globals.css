@@ -48,3 +48,39 @@ a {
   transform: translateY(-2px);
   box-shadow: 0 12px 28px rgba(236, 72, 153, 0.45);
 }
+
+/* === CATEGORY GRID (RESTORE ORIGINAL LOOK) === */
+
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.category-card {
+  background: #ffffff;
+  border: 1px solid #eee;
+  border-radius: 14px;
+  padding: 22px;
+  text-decoration: none;
+  color: inherit;
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
+}
+
+.category-card:hover {
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.08);
+  transform: translateY(-4px);
+}
+
+.category-card h3 {
+  font-size: 18px;
+  margin-bottom: 6px;
+  color: #111;
+}
+
+.category-card p {
+  font-size: 14px;
+  color: #666;
+  margin: 0;
+}
